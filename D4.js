@@ -111,14 +111,16 @@ console.log("Il numero è multiplo di 3 o di 7? " + check3and7(3))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-newstring = " "
+
  const reverseString = function(string){
-    
-     newstring = reverseString(string)
-     return string
+
+    const arrayString = string.split('')
+    arrayString.reverse()
+    const invertedString = arrayString.join('')
+    return invertedString
  }
 
- console.log("la parola al contrario è " + reverseString("massimo"))
+ console.log("la parola al contrario è " + reverseString("EPICODE"))
 
 
 /* ESERCIZIO 8
@@ -128,15 +130,35 @@ newstring = " "
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const upperFirst = function(string){
+  
+}
+
+upperFirst('mi piace programmare')
+
+
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
  della stringa originale.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const cutString = function(string){
+  newString = string.slice ( 1, - 1)
+  return newString
+}
+console.log(cutString('epicode'))
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function(number){
+let diceArray = []
+    for(let i = 0; i < number; i++){
+  diceArray.push(Math.floor(Math.random() * 10))
+    }
+    return diceArray
+}
+
+console.log("numeri casuali inclusi tra 0 e 10 " + giveMeRandom(10))
