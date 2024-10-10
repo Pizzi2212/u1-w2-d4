@@ -42,15 +42,17 @@ console.log( "il risultato è", + crazySum(15,15))
 
 let diff = 0
 const crazyDiff = function(number) {
-    diff = Math.abs(19-number)
-    if(number > 19){
-     diff = diff * 3
-     return diff
-    }
+    
+ diff = Math.abs(number - 19)
+  if(number > 19){
+    diff = diff * 3
+    return diff
+  }else {
+    return diff 
+  }
 }
 
-console.log(crazyDiff(10))
-
+console.log("la differenza assoluta è", + crazyDiff(20))
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
@@ -58,6 +60,18 @@ console.log(crazyDiff(10))
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const boundary = function(n) {
+ if(n > 20 && n <= 100 || n === 400){
+   return true
+ } else {
+    return false
+ }
+}
+
+ console.log("è compreso tra 20 e 100 uguale a 400 " + boundary(400))
+
+
+
 
 /* ESERCIZIO 5
  Scrivi una funzione di nome "epify" che accetta una stringa come parametro.
@@ -67,18 +81,45 @@ console.log(crazyDiff(10))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const epify = function (string){
+   if(string === "EPICODE"){
+    return string
+   }else {
+    string = "EPICODE" + string
+    return string
+   }
+}
+
+console.log("epicode? " + epify(" massimo") )
+
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+ const check3and7 = function (number){
+   if (number % 3 === 0 || number % 7 === 0){
+    return true
+   }
+ }
+
+console.log("Il numero è multiplo di 3 o di 7? " + check3and7(3))
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+newstring = " "
+ const reverseString = function(string){
+    
+     newstring = reverseString(string)
+     return string
+ }
+
+ console.log("la parola al contrario è " + reverseString("massimo"))
+
 
 /* ESERCIZIO 8
  Scrivi una funzione di nome "upperFirst", che riceve come parametro una stringa formata da diverse parole.
